@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background: slategray;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Rubik', sans-serif;
+}
+/* -- CONTAINER ------------------------------------------------------------- */
+.calculator {
+  width: 80%;
+  max-width: 22em;
+}
+
+/* -- DISPLAY---------------------------------------------------------------- */
+.calculator-responses {
+  width: 100%;
+  height: 6.4em;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+  padding-top: 0.4em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.calculator-display {
+  width: 100%;
+  height: 2.5em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 0 0 5px 5px;
+
+  padding-left: 1em;
+  font-size: 1em;
+}
+.calculator-display:focus {
+  outline: none;
+}
+
+.responses-value {
+  font-size: 1.2em;
+  height: 1.24em;
+  padding-right: 0.5em;
+}
+
+/* -- KEYBOARD -------------------------------------------------------------- */
+.calculator-keyboard {
+  display: grid;
+  width: 100%;
+  height: 17.5em;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+/* -- BOTON ----------------------------------------------------------------- */
+.boton {
+  border-radius: 5px;
+
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton:hover {
+  background-color: whitesmoke;
+}
+
+.boton:nth-child(4),
+.boton:nth-child(5) {
+  background-color: rgb(255, 102, 0);
+}
+.boton:nth-child(4):hover,
+.boton:nth-child(5):hover {
+  background-color: rgba(255, 102, 0, 0.829);
+}
